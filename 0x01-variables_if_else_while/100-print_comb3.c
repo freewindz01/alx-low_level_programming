@@ -13,23 +13,26 @@
  */
 int main(void)
 {
-	int i;
+	int i = 0, j;
 
-
-	for (i = 0; i < 100; i++)
+	while (i <= 9)
 	{
-		putchar((i % 10) + '0'
-); 
-		putchar((i / 10) + '0'
-);
-
-		if (i != 99)
+		j = 0;
+		while (j <= 9)
 		{
-			putchar(',');
-			putchar(' ');
-
+			if (i != j && i < j)
+			{
+				putchar(i + 48);	
+				putchar(j + 48);
+				if (i + j != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			++j;
 		}
-
+		++i;
 	}
 	putchar('\n');
 
