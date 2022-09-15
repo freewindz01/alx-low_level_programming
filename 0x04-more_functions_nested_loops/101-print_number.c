@@ -7,8 +7,8 @@
  */
 void print_number(int n)
 {
-	long x; /* power of 10 */
-	int y; /* boolean check */
+	long m; /* power of 10 */
+	int c; /* boolean check */
 	long num; /* convert int to long */
 
 	num = n;
@@ -20,28 +20,28 @@ void print_number(int n)
 	}
 
 	/* count up */
-	x = 1;
-	y = 1;
-	while (y)
+	m = 1;
+	c = 1;
+	while (c)
 	{
-		if (num / (x * 10) > 0)
-			x *= 10;
+		if (num / (m * 10) > 0)
+			m *= 10;
 		else
-			y = 0;
+			c = 0;
 	}
 
 	/* count down */
 	while (num >= 0)
 	{
-		if (x == 1)
+		if (m == 1)
 		{
 			_putchar(num % 10 + '0');
 			num = -1;
 		}
 		else
 		{
-			_putchar((num / x % 10) + '0');
-			x /= 10;
+			_putchar((num / m % 10) + '0');
+			m /= 10;
 		}
 	}
 }
