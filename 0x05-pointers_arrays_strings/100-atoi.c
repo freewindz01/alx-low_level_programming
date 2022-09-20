@@ -14,29 +14,29 @@
 
 int _atoi(char *s)
 {
-	int x;
-	int a, b;
+	int i;
+	int h, p;
 
-	a = 0;
-	b = -1;
-	for (x = 0; s[x] != '\0'; x++)
+	h = 0;
+	p = -1;
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[x] == '-')
-			b *= -1;
+		if (s[i] == '-')
+			p *= -1;
 
-		if (s[x] > 47 && s[x] < 58)
+		if (s[i] > 47 && s[i] < 58)
 		{
-			if (a < 0)
-				a = (a * 10) - (s[a] - '0');
+			if (h < 0)
+				h = (h * 10) - (s[i] - '0');
 			else
-				a = (s[x] - '0') * -1;
+				h = (s[i] - '0') * -1;
 
-			if (s[x + 1] < 48 || s[x + 1] > 57)
+			if (s[i + 1] < 48 || s[i + 1] > 57)
 				break;
 		}
 	}
-	if (b < 0)
-		a *= -1;
+	if (p < 0)
+		h *= -1;
 
-	return (a);
+	return (h);
 }
