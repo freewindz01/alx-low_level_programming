@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
 * print_list - main function
@@ -7,6 +8,7 @@
 * Return: Returns number of node
 * Description: singly linked list node structure
 */
+
 size_t print_list(const list_t *h)
 {
 	int count = 0;
@@ -26,6 +28,6 @@ size_t print_list(const list_t *h)
 		}
 		h = h->next;
 	}
-	return (node);
+	return (count);
 
 }
